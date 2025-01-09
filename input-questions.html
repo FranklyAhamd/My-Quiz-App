@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Questions</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="input-questions.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Input Questions</h1>
+    </header>
+    <main>
+      <!-- Form Section -->
+      <form id="question-form">
+        <div>
+          <label for="question">Question:</label>
+          <input type="text" id="question" required />
+        </div>
+        <div>
+          <label for="option1">Option A:</label>
+          <input type="text" id="option1" required />
+        </div>
+        <div>
+          <label for="option2">Option B:</label>
+          <input type="text" id="option2" required />
+        </div>
+        <div>
+          <label for="option3">Option C:</label>
+          <input type="text" id="option3" required />
+        </div>
+        <div>
+          <label for="option4">Option D:</label>
+          <input type="text" id="option4" required />
+        </div>
+        <div>
+          <label for="answer">Correct Answer:</label>
+          <select id="answer" required>
+            <option value="0">A</option>
+            <option value="1">B</option>
+            <option value="2">C</option>
+            <option value="3">D</option>
+          </select>
+        </div>
+        <button type="submit">Add Question</button>
+      </form>
+
+      <!-- Questions Table Section -->
+      <div id="questions-table-container">
+        <div class="getter">
+          <h2>Current Questions</h2>
+          <div id="search-bar-container">
+            <input
+              type="text"
+              id="search-bar"
+              placeholder="Search questions..."
+            />
+          </div>
+        </div>
+        <!-- Search Bar -->
+
+        <table id="questions-table">
+          <thead>
+            <tr>
+              <th>S/N</th>
+              <th>Question</th>
+              <th>Option A</th>
+              <th>Option B</th>
+              <th>Option C</th>
+              <th>Option D</th>
+              <th>Correct Answer</th>
+              <th>Actions</th>
+              <!-- New column for delete button -->
+            </tr>
+          </thead>
+
+          <tbody id="questions-list"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="input-questions.js"></script>
+  </body>
+</html>

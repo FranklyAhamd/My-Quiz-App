@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - Quiz Scores</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+    <!-- Link to the external CSS file -->
+  </head>
+  <body>
+    <div id="admin-container">
+      <h1>Admin Panel</h1>
+      <!-- Filter Section -->
+      <div class="filter-container">
+        <label for="class-filter">Filter by Class:</label>
+        <select id="class-filter">
+          <option value="">All</option>
+          <option value="Class A">Class A</option>
+          <option value="Class B">Class B</option>
+          <option value="Class C">Class C</option>
+        </select>
+
+        <label for="name-filter">Filter by Name:</label>
+        <input type="text" id="name-filter" placeholder="Search by name" />
+
+        <label for="min-score">Min Score:</label>
+        <input type="number" id="min-score" placeholder="Min score" min="0" />
+
+        <label for="max-score">Max Score:</label>
+        <input type="number" id="max-score" placeholder="Max score" max="10" />
+
+        <label for="date-range">Date Range:</label>
+        <input type="date" id="start-date" />
+        <input type="date" id="end-date" />
+      </div>
+
+      <!-- Data Table Section -->
+      <table id="scores-table">
+        <thead>
+          <tr>
+            <th>
+              Name <button class="sort-button" data-sort="name">Sort</button>
+            </th>
+            <th>
+              Class <button class="sort-button" data-sort="class">Sort</button>
+            </th>
+            <th>
+              Score <button class="sort-button" data-sort="score">Sort</button>
+            </th>
+            <th>
+              Date <button class="sort-button" data-sort="date">Sort</button>
+            </th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data rows will be inserted here dynamically -->
+        </tbody>
+      </table>
+
+      <!-- Pagination -->
+      <div class="pagination-container">
+        <button id="prev-page" disabled>Previous</button>
+        <button id="next-page" disabled>Next</button>
+      </div>
+
+      <!-- Export Data Button -->
+      <button id="export-button">Export Data as CSV</button>
+    </div>
+
+    <script type="module" src="admin.js"></script>
+  </body>
+</html>

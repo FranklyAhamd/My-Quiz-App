@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultimate Quiz Challenge</title>
+    <!-- Link to Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Student Info Form -->
+    <div id="student-info">
+      <h1>Welcome to the Ultimate Quiz Challenge</h1>
+      <form id="student-form">
+        <label for="student-name">Enter Your Name:</label>
+        <input
+          type="text"
+          id="student-name"
+          name="student-name"
+          placeholder="Type your name here"
+          required
+        />
+        <label for="student-class">Choose Your Group:</label>
+        <select id="student-class" name="student-class" required>
+          <option value="group-a">Group A</option>
+          <option value="group-b">Group B</option>
+          <option value="group-c">Group C</option>
+          <option value="group-d">Group D</option>
+        </select>
+        <label for="question-time">Set Time Per Question (seconds):</label>
+        <select name="question-time" id="question-time" required>
+          <option value="30">30</option>
+          <option value="20">20</option>
+          <option value="10">10</option>
+        </select>
+        <button type="submit">Start Quiz</button>
+      </form>
+    </div>
+
+    <!-- Quiz Container -->
+    <div id="quiz-container" style="display: none">
+      <h1>Quiz App</h1>
+      <div id="score" style="display: none">Your Current Score: 0</div>
+      <div id="question-counter">Question 1 out of 10</div>
+      <div id="timer">
+        <div id="timer-bar"></div>
+      </div>
+      <div id="time-left-parent">
+        Time Remaining: <span id="time-left"></span>s
+      </div>
+      <div class="quiz_question fade-in">
+        <div class="question"></div>
+        <div class="quiz_options">
+          <!-- Options will be generated dynamically -->
+        </div>
+        <button id="next-button" disabled>Next Question</button>
+        <button id="submit-button" style="display: none">
+          <a href="index.html">Submit Quiz</a>
+        </button>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
